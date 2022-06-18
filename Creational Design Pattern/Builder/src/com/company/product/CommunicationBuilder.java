@@ -1,6 +1,8 @@
 package com.company.product;
 
 public interface CommunicationBuilder {
-    void buildCommunication(String moduleName, int price);
+    void buildCommunication();
     CommunicationModule getCommunicationModule();
+    void monthlyCost();
+    void connectionCost();
 }

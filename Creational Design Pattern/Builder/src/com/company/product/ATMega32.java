@@ -8,6 +8,6 @@ public class ATMega32 implements Processor{
 
     @Override
     public int getProcessorCost() {
-        return 120;
+        return 12000;
     }
 }

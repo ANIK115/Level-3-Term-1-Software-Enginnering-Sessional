@@ -8,6 +8,6 @@ public class LCD implements Display{
 
     @Override
     public int getDisplayCost() {
-        return 150;
+        return 11000;
     }
 }

@@ -5,12 +5,12 @@ public class Optimal implements BuildDisplayUnit{
 
     @Override
     public void buildProcessor() {
-        displayUnit.processor = new ArduinoMega();
+        displayUnit.setProcessor(new ArduinoMega());
     }
 
     @Override
     public void buildDisplay() {
-        displayUnit.display = new LED();
+        displayUnit.setDisplay(new LED());
     }
 
     @Override

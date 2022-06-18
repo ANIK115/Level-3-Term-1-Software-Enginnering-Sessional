@@ -1,15 +1,28 @@
 package com.company.product;
 
 public class WiFiService implements CommunicationBuilder{
-    CommunicationModule module;
+    private CommunicationModule module;
 
     @Override
-    public void buildCommunication(String moduleName, int price) {
-        module = new CommunicationModule(moduleName, price);
+    public void buildCommunication() {
+        module = new CommunicationModule("WiFi Service");
+        monthlyCost();
+        connectionCost();
     }
 
     @Override
     public CommunicationModule getCommunicationModule() {
         return module;
     }
+
+    @Override
+    public void monthlyCost() {
+        this.module.setMonthlyCost(3500);
+    }
+
+    @Override
+    public void connectionCost() {
+        this.module.setConnectionCost(2000);
+    }
+
 }

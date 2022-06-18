@@ -2,12 +2,13 @@ package com.company.product;
 
 public class CommunicationModule {
     private String name;
-    private int cost;
+    private int monthlyCost;
+    private int connectionCost;
 
-    public CommunicationModule(String name, int cost) {
+    public CommunicationModule(String name) {
         this.name = name;
-        this.cost = cost;
     }
+
 
     public String getName() {
         return name;
@@ -17,11 +18,19 @@ public class CommunicationModule {
         this.name = name;
     }
 
-    public int getCost() {
-        return cost;
+    public int getMonthlyCost() {
+        return monthlyCost;
     }
 
-    public void setCost(int cost) {
-        this.cost = cost;
+    public void setMonthlyCost(int monthlyCost) {
+        this.monthlyCost = monthlyCost;
+    }
+
+    public int getConnectionCost() {
+        return connectionCost;
+    }
+
+    public void setConnectionCost(int connectionCost) {
+        this.connectionCost = connectionCost;
     }
 }

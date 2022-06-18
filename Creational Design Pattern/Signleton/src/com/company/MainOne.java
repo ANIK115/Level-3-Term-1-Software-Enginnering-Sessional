@@ -1,6 +1,6 @@
 package com.company;
 
-public class Main {
+public class MainOne {
 
     public static void main(String[] args) {
 	// write your code here
@@ -16,6 +16,7 @@ public class Main {
         ec = EditorConnection.getEditorConnection("hello.py");
         EditorConnection.turnOffPreviousConnection();
         ec = EditorConnection.getEditorConnection("hello.py");
+        //adding comments
         editor = ec.getEditor();
         editor.parsingMethod();
     }

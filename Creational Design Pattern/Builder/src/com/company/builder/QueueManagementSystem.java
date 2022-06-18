@@ -14,8 +14,24 @@ public class QueueManagementSystem {
     public QueueManagementSystem() {
     }
 
+    public void showDescription()
+    {
+        System.out.println("Display Unit: ");
+        System.out.println("Processor: "+displayUnit.getProcessor().getProcessorName()+" , price: "
+        +displayUnit.getProcessor().getProcessorCost());
+        System.out.println("Display: "+displayUnit.getDisplay().getDisplayName()+" , price: "
+        +displayUnit.getDisplay().getDisplayCost());
+        System.out.println("\nCommunication Channel: "+module.getName());
+        System.out.println("Module cost: "+module.getConnectionCost());
+        System.out.println("Control Unit: "+controlDisplayName +", Control Unit price: "+controlDisplayPrice);
+        System.out.println("Number of display units: "+noOfDisplayUnits);
+        System.out.println("Yearly Communication cost: "+getYearlyCommunicationPrice());
+        System.out.println("Total cost of this system: "+(displayUnit.getDisplay().getDisplayCost()*noOfDisplayUnits+displayUnit.getProcessor().getProcessorCost()+module.getConnectionCost()+controlDisplayPrice+getYearlyCommunicationPrice()));
+
+    }
+
     public int getYearlyCommunicationPrice() {
-        return (module.getCost()*12);
+        return (module.getMonthlyCost()*12);
     }
 
     public int getNoOfDisplayUnits() {

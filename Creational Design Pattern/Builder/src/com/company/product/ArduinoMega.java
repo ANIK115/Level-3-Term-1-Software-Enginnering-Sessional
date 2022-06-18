@@ -8,6 +8,6 @@ public class ArduinoMega implements Processor{
 
     @Override
     public int getProcessorCost() {
-        return 150;
+        return 15000;
     }
 }

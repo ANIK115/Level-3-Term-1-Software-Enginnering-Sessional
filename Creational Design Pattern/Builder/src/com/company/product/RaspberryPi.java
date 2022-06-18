@@ -8,6 +8,6 @@ public class RaspberryPi implements Processor{
 
     @Override
     public int getProcessorCost() {
-        return 100;
+        return 10000;
     }
 }

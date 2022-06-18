@@ -5,12 +5,12 @@ public class Deluxe implements BuildDisplayUnit{
 
     @Override
     public void buildProcessor() {
-        displayUnit.processor = new RaspberryPi();
+        displayUnit.setProcessor(new RaspberryPi());
     }
 
     @Override
     public void buildDisplay() {
-        displayUnit.display = new LCD();
+        displayUnit.setDisplay(new LCD());
     }
 
     @Override

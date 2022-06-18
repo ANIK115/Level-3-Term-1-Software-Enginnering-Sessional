@@ -8,6 +8,6 @@ public class LED implements Display{
 
     @Override
     public int getDisplayCost() {
-        return 170;
+        return 170000;
     }
 }
