@@ -2,11 +2,12 @@ package com.company;
 
 import com.company.decorators.MealDecorator;
 import com.company.factory.*;
+import com.company.meal.Meal;
 
 import java.util.Scanner;
 
 public class BurgerShop {
-    MealDecorator meal = null;
+    Meal meal = null;
     public void menu()
     {
         System.out.println("1. Beef burger with French fry and cheese\n" +
@@ -18,6 +19,7 @@ public class BurgerShop {
 
     public void takeOrder()
     {
+        meal = null;
         AbstractMealFactory burgerFactory = new BurgerFactory();
         AbstractMealFactory cheeseFactory = new CheeseFactory();
         AbstractMealFactory appetizerFactory = new AppetizerFactory();

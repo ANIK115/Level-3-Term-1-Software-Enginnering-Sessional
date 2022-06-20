@@ -8,31 +8,31 @@ import com.company.meal.VeggiBurger;
 
 public class BurgerFactory extends AbstractMealFactory{
     @Override
-    public MealDecorator getBurger(String burgerType) {
+    public Meal getBurger(String burgerType) {
         if (burgerType.equalsIgnoreCase("beef"))
         {
-            return new MealDecorator(new BeefBurger());
+            return new BeefBurger();
         }else if(burgerType.equalsIgnoreCase("chicken"))
         {
-            return new MealDecorator(new ChickenBurger());
+            return new ChickenBurger();
         }else
         {
-            return new MealDecorator(new VeggiBurger());
+            return new VeggiBurger();
         }
     }
 
     @Override
-    public MealDecorator addCheese(MealDecorator meal) {
+    public Meal addCheese(Meal meal) {
         return null;
     }
 
     @Override
-    public MealDecorator addAppetizer(String appetizer, MealDecorator meal) {
+    public Meal addAppetizer(String appetizer, Meal meal) {
         return null;
     }
 
     @Override
-    public MealDecorator addDrinks(String drinks, MealDecorator meal) {
+    public Meal addDrinks(String drinks, Meal meal) {
         return null;
     }
 }

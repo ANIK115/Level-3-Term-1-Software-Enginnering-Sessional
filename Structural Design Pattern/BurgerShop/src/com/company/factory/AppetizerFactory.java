@@ -3,20 +3,21 @@ package com.company.factory;
 import com.company.decorators.FrenchFryDecorator;
 import com.company.decorators.MealDecorator;
 import com.company.decorators.OnionRingsDecorator;
+import com.company.meal.Meal;
 
 public class AppetizerFactory extends AbstractMealFactory{
     @Override
-    public MealDecorator getBurger(String burgerType) {
+    public Meal getBurger(String burgerType) {
         return null;
     }
 
     @Override
-    public MealDecorator addCheese(MealDecorator meal) {
+    public Meal addCheese(Meal meal) {
         return null;
     }
 
     @Override
-    public MealDecorator addAppetizer(String appetizer, MealDecorator meal) {
+    public Meal addAppetizer(String appetizer, Meal meal) {
         if(appetizer.equalsIgnoreCase("french fry"))
         {
             return new FrenchFryDecorator(meal);
@@ -31,7 +32,7 @@ public class AppetizerFactory extends AbstractMealFactory{
     }
 
     @Override
-    public MealDecorator addDrinks(String drinks, MealDecorator meal) {
+    public Meal addDrinks(String drinks, Meal meal) {
         return null;
     }
 }

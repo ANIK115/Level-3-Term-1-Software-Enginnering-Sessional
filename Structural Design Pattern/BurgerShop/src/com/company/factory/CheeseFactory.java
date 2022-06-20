@@ -2,25 +2,26 @@ package com.company.factory;
 
 import com.company.decorators.CheeseDecorator;
 import com.company.decorators.MealDecorator;
+import com.company.meal.Meal;
 
 public class CheeseFactory extends AbstractMealFactory{
     @Override
-    public MealDecorator getBurger(String burgerType) {
+    public Meal getBurger(String burgerType) {
         return null;
     }
 
     @Override
-    public MealDecorator addCheese(MealDecorator meal) {
+    public Meal addCheese(Meal meal) {
         return new CheeseDecorator(meal);
     }
 
     @Override
-    public MealDecorator addAppetizer(String appetizer, MealDecorator meal) {
+    public Meal addAppetizer(String appetizer, Meal meal) {
         return null;
     }
 
     @Override
-    public MealDecorator addDrinks(String drinks, MealDecorator meal) {
+    public Meal addDrinks(String drinks, Meal meal) {
         return null;
     }
 }
